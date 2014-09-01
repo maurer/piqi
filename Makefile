@@ -22,6 +22,8 @@ ifeq ($(SYSTEM),$(filter $(SYSTEM),mingw mingw64))
 OCAMLFIND_DESTDIR := $(shell cygpath -w $(OCAMLFIND_DESTDIR))
 endif
 export OCAMLFIND_DESTDIR
+# so that dependencies could find each other
+export OCAMLPATH := $(OCAMLFIND_DESTDIR)
 endif
 
 
@@ -34,8 +36,7 @@ endif
 
 
 deps: build-dir
-	$(MAKE) -C deps
-	$(MAKE) -C deps uninstall install
+	$(MAKE) -C deps all uninstall install
 
 
 build-dir:
