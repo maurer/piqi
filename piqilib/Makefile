@@ -11,7 +11,7 @@ LIBINSTALL_FILES += \
 
 STATIC = 1 # force creation of static library (don't create dlls)
 
-PACKS = ulex easy-format xmlm
+PACKS = easy-format xmlm sedlex
 
 
 SOURCES = \
@@ -39,6 +39,7 @@ SOURCES = \
 	piqi_protobuf.ml \
 	piqi_db.ml \
 	\
+	piqi_utf8.ml \
 	piq_lexer.ml \
 	piq_parser.ml \
 	piq_gen.ml \

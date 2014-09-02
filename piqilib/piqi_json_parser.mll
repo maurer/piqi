@@ -46,6 +46,9 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *)
 
 {
+  module Utf8 = Piqi_utf8
+
+
   type json = Piqi_json_type.json
 
   module Lexing =
