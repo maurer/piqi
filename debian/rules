@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#DH_VERBOSE = 1
+
+DESTDIR=$(CURDIR)/debian/tmp
+include /usr/share/ocaml/ocamlvars.mk
+OCAMLFIND_DESTDIR=$(DESTDIR)/$(OCAML_STDLIB_DIR)
+export OCAMLFIND_DESTDIR
+PIQI_OCAML_DESTDIR=$(OCAMLFIND_DESTDIR)
+export PIQI_OCAML_DESTDIR
+OCAMLFIND_LDCONF=ignore
+export OCAMLFIND_LDCONF
+
+%:
+	dh $@  --with ocaml
+
+override_dh_auto_configure:
+	./configure --prefix=/usr
+
+override_dh_auto_build:
+	$(MAKE) doc
+	dh_auto_build
+
+override_dh_auto_test:
+	$(MAKE) -C tests	
+
+override_dh_auto_install:
+	dh_auto_install
+	install -d $(PIQI_OCAML_DESTDIR)
+	$(MAKE) ocaml-install
+	install -d $(DESTDIR)/usr/share/doc/piqi/html
+	install -T CHANGES $(DESTDIR)/usr/share/doc/piqi/changelog
+	install -t $(DESTDIR)/usr/share/doc/piqi/html/ doc/*.html
+	install -t $(DESTDIR)/$(OCAML_STDLIB_DIR)/piqilib piqilib/*.ml* --mode 644

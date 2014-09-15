@@ -1,0 +1,62 @@
+piqi (0.6.8-1) unstable; urgency=low
+
+  * Initial release (Closes: #761343)
+  * Avoid trying to build deps in the package
+  * Install ocaml library
+
+ -- Matthew Maurer <maurer@matthewmaurer.org>  Sat, 13 Sep 2014 02:16:25 +0000
+
+piqi (0.6.6-2) unstable; urgency=low
+
+  * Update description (bring in sync with upstream)
+
+ -- Anton Lavrik <alavrik@piqi.org>  Tue, 01 Apr 2014 22:30:58 -0700
+
+piqi (0.6.6-1) unstable; urgency=low
+
+  * Bump upstream version, backwards incompatible changes:
+    - `piqi version` deprecated in favour of `piqi --version`
+
+ -- Ignas Vyšniauskas <i.vysniauskas@gmail.com>  Tue, 01 Apr 2014 00:22:21 +0200
+
+piqi (0.6.5-2) unstable; urgency=low
+
+  * Cosmetic changes
+
+ -- Anton Lavrik <alavrik@piqi.org>  Thu, 07 Nov 2013 08:23:34 +0100
+
+piqi (0.6.5-1) unstable; urgency=low
+
+  * Bump upstream version
+
+ -- Motiejus Jakštys <desired.mta@gmail.com>  Thu, 07 Nov 2013 08:23:34 +0100
+
+piqi (0.6.4) unstable; urgency=low
+
+  * Bump upstream version
+
+ -- Motiejus Jakštys <desired.mta@gmail.com>  Sun, 21 Apr 2013 11:35:41 +0300
+
+piqi (0.6.3-4) unstable; urgency=low
+
+  * Fix internal documentation
+
+ -- Motiejus Jakštys <desired.mta@gmail.com>  Sun, 14 Apr 2013 16:06:09 +0300
+
+piqi (0.6.3-3) unstable; urgency=low
+
+  * Fix build dependencies: add ocaml-findlib and pandoc
+
+ -- Motiejus Jakštys <desired.mta@gmail.com>  Fri, 12 Apr 2013 17:00:17 +0200
+
+piqi (0.6.3-2) unstable; urgency=low
+
+  * Include documentation and manpages
+
+ -- Motiejus Jakštys <desired.mta@gmail.com>  Fri, 12 Apr 2013 13:15:52 +0200
+
+piqi (0.6.3-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Motiejus Jakštys <desired.mta@gmail.com>  Mon, 08 Apr 2013 10:16:28 +0300
