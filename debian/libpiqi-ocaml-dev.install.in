@@ -1,4 +1,6 @@
+@OCamlStdlibDir@/piqilib/META
 @OCamlStdlibDir@/piqilib/*.cmi
 @OCamlStdlibDir@/piqilib/*.ml*
 @OCamlStdlibDir@/piqilib/*.a
+@OCamlStdlibDir@/piqilib/*.cma
 OPT: @OCamlStdlibDir@/piqilib/*.cmxa

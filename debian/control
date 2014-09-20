@@ -15,7 +15,7 @@ Build-Depends:
   libeasy-format-ocaml-dev,
   liboptcomp-camlp4-dev
 Standards-Version: 3.9.5
-Section: devel
+Section: ocaml
 Homepage: http://piqi.org
 
 Package: piqi
@@ -60,7 +60,6 @@ Description: Universal schema language for JSON, XML, Protocol Buffers
  (Piq). Also, Piqi is a lot more extensible.
 
 Package: libpiqi-ocaml-dev
-Section: ocaml
 Architecture: any
 Depends:
   ${ocaml:Depends},
@@ -72,21 +71,3 @@ Description: OCaml Piqi Implementation Library (development)
  This library provides the functionality used to build the piqi binary.
  It is repackaged primarily to enable the building of piqi-ocaml, but can be
  used to implement other tools supporting the piqi language.
- .
- This is the development package, for building against the library. 
-
-Package: libpiqi-ocaml
-Section: ocaml
-Architecture: any
-Depends:
- ocaml-findlib,
- ${ocaml:Depends},
- ${shlibs:Depends},
- ${misc:Depends}
-Provides: ${ocaml:Provides}
-Description: OCaml Piqi Implementation Library
- This library provides the functionality used to build the piqi binary.       
- It is repackaged primarily to enable the building of piqi-ocaml, but can be
- used to implement other tools supporting the piqi language.          
- .
- This is the library package, for running code against.
